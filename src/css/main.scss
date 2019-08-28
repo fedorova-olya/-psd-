@@ -1,0 +1,113 @@
+@import "_reset";
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: #fff;
+}
+
+/*size width*/
+.wrapper {
+    width: 1110px;
+    margin: 0 auto;
+}
+
+/*link*/
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.header1 .entrance a.active {
+    background: #ff7373;
+}
+
+/*ul>li*/
+ul {
+    li {
+        list-style: none;
+    }
+}
+
+
+
+/*header*/
+
+header {
+    .wrapper {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    // общие параметры для навигационных списков шапки
+    .header-nav__list {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+
+        li {
+            padding: 15px 13px;
+
+            // лишние паддинги с лева и права
+            &:first-child {
+                padding-left: 0;
+            }
+
+            &:last-child {
+                padding-right: 0;
+            }
+
+            a {
+                font-size: 13px;
+            }
+        }
+    }
+
+    .header1 {
+        background: #472424;
+
+        .header-block {
+            width: 29%;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+
+            .bag {
+                margin-left: 15px;
+            }
+
+            a {
+                padding: 13px 15px;
+                box-shadow: -1px 0 0 rgba(255, 255, 255, 0.1);
+
+                &:first-child {
+                    margin-left: 20px;
+                    border-left: 1px solid #fff;
+                }
+            }
+        }
+
+    }
+
+    .header2 {
+        background: #613232;
+        justify-content: flex-start;
+
+        // .wrapper {}
+
+        .header2-nav {
+            width: 55%;
+
+            .header-nav__list {
+
+                a {
+                    font-size: 16px;
+
+                }
+
+            }
+        }
+    }
+}
