@@ -1,0 +1,42 @@
+@mixin sale25 {
+    &:before {
+        display: block;
+        content: "-25%";
+        background: #ff7373;
+        position: absolute;
+        top: 20px;
+        right: 0;
+        padding: 6px 13px;
+    }
+
+}
+
+@mixin sale50 {
+    &:before {
+        display: block;
+        content: "-50%";
+        background: #ff7373;
+        position: absolute;
+        top: 20px;
+        right: 0;
+        padding: 6px 13px;
+    }
+
+}
+
+@mixin noneSale {
+    position: static;
+
+    &:before {
+        display: none;
+    }
+}
+
+@mixin before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
