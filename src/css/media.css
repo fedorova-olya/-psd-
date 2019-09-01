@@ -409,7 +409,8 @@
       section#baner .wrapper .baner_block__text {
         width: 100%;
         padding: 40px 25px;
-        text-align: center; }
+        text-align: center;
+        color: #222; }
         section#baner .wrapper .baner_block__text:before {
           display: none; }
   section#relevant.wrapper {
