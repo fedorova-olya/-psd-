@@ -1,0 +1,323 @@
+@media (min-width : 220px) and (max-width : 786px) {
+    @import "_reset";
+    @import "_mixin";
+
+    /*size width*/
+    .wrapper {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+
+    }
+
+    header {
+        .wrapper {
+            justify-content: center;
+        }
+
+        // общие параметры для навигационных списков шапки
+        .header-nav__list {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+
+            li {
+
+                // лишние паддинги с лева и права
+                &:first-child {
+                    padding-left: 13px;
+                }
+
+                &:last-child {
+                    padding-right: 13px;
+                }
+            }
+        }
+
+        .header1 {
+            .header-nav {
+                display: none;
+            }
+
+            .header-block {
+                width: 100%;
+                padding: 15px;
+                justify-content: center;
+            }
+        }
+
+        .header2 {
+            padding: 15px;
+
+            .wrapper {
+                justify-content: space-between;
+
+                .hamburger {
+                    display: block;
+                    margin: 0 15px;
+
+                    &:hover+.header2-nav {
+                        display: block;
+                    }
+                }
+
+                .header2-nav {
+                    display: none;
+                    width: 100%;
+                    text-align: center;
+                    transition: all 0.3s ease;
+
+                    .header-nav__list {
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+
+    section#baner {
+        background: url('../../build/img/Layer_2.png') -50px 0;
+
+        .wrapper {
+            justify-content: flex-end;
+
+            .baner_block__text {
+                width: 100%;
+                padding: 40px 25px;
+                text-align: center;
+
+                &:before {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    section#relevant.wrapper {
+        justify-content: space-around;
+        text-align: center;
+        font-size: 30px;
+        margin-top: 0px;
+
+        // left & right block
+        .relevant_block {
+            width: 100%;
+            margin-right: 0;
+            margin-top: 0;
+
+
+            // big img first left big block
+            .relevant_block__img {
+                width: 100%;
+            }
+
+            // mini-logo in left block
+            img.minilogo {
+                left: 0;
+            }
+        }
+
+        // right big block
+        .relevant_block+.relevant_block {
+
+            &:before {
+                display: none;
+            }
+
+            // upper right block
+            .relevant_block_1 {
+                width: 100%;
+                margin-top: 40px;
+
+                .imgTop {
+                    width: 40%;
+                    margin-top: 0;
+                }
+
+                .relevant_block_1__text {
+                    width: 60%;
+                    padding: 40px 0;
+                }
+
+            }
+
+            // lower right block
+            .relevant_block_1+.relevant_block_1 {
+                margin-top: 10px;
+
+                .relevant_block_2 {
+                    width: 49%;
+
+                    img {
+                        width: 100%;
+                    }
+
+                    .relevant_block_2_text {
+                        margin: -35px 0 26px;
+
+                    }
+                }
+
+                .relevant_block_2+.relevant_block_2 {
+                    margin-left: 5px;
+
+                    img {
+                        width: 100%;
+                    }
+
+                    .relevant_block_2_text {
+                        padding: 45px 0;
+                        margin-top: -5px;
+                    }
+                }
+            }
+        }
+
+    }
+
+    section#price {
+        .price_title {
+            margin: 15px 0;
+            width: 100%;
+
+            span {
+                margin-right: 10px;
+            }
+        }
+
+        .price {
+            flex-wrap: wrap;
+
+            .price_block {
+
+                width: 49%;
+                margin-bottom: 10px;
+
+                img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    section#brend {
+        .brend {
+            margin: 0 30px 30px;
+
+            &:first-child {
+                margin-left: 30px;
+            }
+
+            &:last-child {
+                margin-right: 30px;
+            }
+        }
+    }
+
+    section#reviews {
+        display: none;
+    }
+
+    section#news {
+        display: block;
+
+        h4 {
+            margin: 0px 0 10px;
+        }
+
+        .news {
+            flex-wrap: wrap;
+            width: 100%;
+            justify-content: center;
+
+            .news_block {
+                width: 98%;
+            }
+        }
+    }
+
+    section#help {
+        background: #ff7373;
+        margin: 4px 0 0;
+
+        .wrapper {
+            flex-direction: column;
+            align-items: center;
+            padding: 15px 0;
+            text-align: center;
+
+            .help__text {
+                padding-left: 60px;
+
+                &:before {
+                    left: 15px;
+                }
+            }
+
+            a {
+                margin-top: 15px;
+            }
+        }
+    }
+
+    section#forUs {
+        .wrapper {
+            .forUs_block {
+                width: 28%;
+            }
+        }
+    }
+
+    footer {
+        padding: 20px 0;
+
+        .wrapper {
+            flex-wrap: wrap;
+
+            .contact {
+                width: 100%;
+
+                ul {
+                    padding-left: 20px;
+
+                    li {
+                        &::before {
+                            left: -13%;
+                        }
+                    }
+                }
+            }
+
+            .footer {
+                display: none;
+            }
+
+            .footer_block__lower {
+                width: 100%;
+                flex-direction: column;
+                padding: 20px 0 0;
+                text-align: center;
+
+                .logo {
+                    width: 100%;
+                }
+
+                p {
+                    width: 100%;
+                    order: 1;
+                }
+
+                .social {
+                    width: 100%;
+                    margin: 20px 0;
+
+                    a {
+                        margin-left: 20px;
+                        font-size: 20px;
+                    }
+                }
+            }
+        }
+    }
+}

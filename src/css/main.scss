@@ -122,6 +122,39 @@ header {
         background: #613232;
         justify-content: flex-start;
 
+        .hamburger {
+            display: none;
+            width: 30px;
+            margin: 0 auto;
+
+            &-line {
+                width: 100%;
+                height: 4px;
+                background-color: #ff7373;
+                display: block;
+
+                &:nth-child(2) {
+                    margin: 6px auto;
+                }
+            }
+
+            &:hover {
+                cursor: pointer;
+            }
+
+            &.hamburger-active .hamburger-line:nth-child(2) {
+                opacity: 0;
+            }
+
+            &.hamburger-active .hamburger-line:nth-child(1) {
+                transform: translateY(10px) rotate(40deg);
+            }
+
+            &.hamburger-active .hamburger-line:nth-child(3) {
+                transform: translateY(-10px) rotate(-40deg);
+            }
+        }
+
         .logo {
             display: flex;
             align-items: center;
@@ -493,7 +526,7 @@ section#reviews {
 
     .wrapper {
         display: block;
-        min-height: 375px;
+        min-height: 400px;
         position: relative;
         font-size: 0;
         padding: 40px;
